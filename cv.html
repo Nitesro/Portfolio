@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Nelson Gonçalves</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        :root {
+            --primary-color: #2c3e50; /* Bleu foncé pro */
+            --accent-color: #3498db; /* Bleu plus vif pour les titres */
+            --text-color: #333;
+            --bg-sidebar: #f4f6f7;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #e0e0e0; /* Fond gris pour la vue web */
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Format A4 */
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            background: var(--white);
+            display: grid;
+            grid-template-columns: 30% 70%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* Colonne Gauche */
+        .sidebar {
+            background-color: var(--bg-sidebar);
+            padding: 30px 20px;
+            color: var(--primary-color);
+        }
+
+        .photo-container {
+            width: 150px;
+            height: 150px;
+            background-color: #ddd;
+            border-radius: 50%;
+            margin: 0 auto 20px auto;
+            overflow: hidden;
+            border: 3px solid var(--accent-color);
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .section-title-sidebar {
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        .contact-info div {
+            margin-bottom: 10px;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+            word-break: break-all;
+        }
+
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        ul.skills, ul.languages, ul.hobbies {
+            list-style: none;
+            font-size: 0.9em;
+        }
+
+        ul.skills li, ul.languages li, ul.hobbies li {
+            margin-bottom: 8px;
+        }
+
+        /* Colonne Droite */
+        .main-content {
+            padding: 40px;
+            color: var(--text-color);
+        }
+
+        .header-name h1 {
+            font-size: 2.5em;
+            text-transform: uppercase;
+            color: var(--primary-color);
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+
+        .header-name h2 {
+            font-size: 1.2em;
+            color: var(--accent-color);
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+        .section-title-main {
+            font-size: 1.3em;
+            color: var(--primary-color);
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title-main::before {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: var(--accent-color);
+            margin-right: 10px;
+        }
+
+        .profile-text {
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 20px;
+        }
+
+        .job-title {
+            font-weight: 700;
+            font-size: 1.1em;
+            color: var(--primary-color);
+        }
+
+        .company-date {
+            font-style: italic;
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .tasks {
+            margin-left: 15px;
+            font-size: 0.95em;
+        }
+
+        .tasks li {
+            margin-bottom: 3px;
+        }
+
+        /* Impression */
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .page {
+                box-shadow: none;
+                width: 100%;
+                height: 100%;
+            }
+            /* Force l'impression des couleurs de fond */
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page">
+        <div class="sidebar">
+            <div class="photo-container">
+                <img src="images/nelson.jpg" alt="Nelson Gonçalves">
+            </div>
+
+            <div class="section-title-sidebar">Contact</div>
+            <div class="contact-info">
+                <div>📞 06 95 41 64 36</div>
+                <div>📍 Paris / Île-de-France</div>
+                <div>✉️ <a href="mailto:nelson_goncalves@hotmail.fr">nelson_goncalves@hotmail.fr</a></div>
+                <div>🌐 <a href="https://nelson-sindria-portfolio.vercel.app">Mon Portfolio</a></div>
+            </div>
+
+            <div class="section-title-sidebar">Compétences</div>
+            <ul class="skills">
+                <li><strong>Langages :</strong> Java, JS, PHP, Python, C#, Dart, SQL</li>
+                <li><strong>Web :</strong> HTML5, CSS3</li>
+                <li><strong>Frameworks :</strong>React Native, Flutter, React.js</li>
+                <li><strong>Data & Outils :</strong><li>Bases de données: MySql, MongoDB <li></li>DevOps : Git, Docker, Github actions<li></li>Environnement & Design :<li></li>VS Code, IA, Canva, Photoshop</li>
+            </ul>
+
+            <div class="section-title-sidebar">Soft Skills</div>
+            <ul class="skills">
+                <li>Travail d'équipe</li>
+                <li>Adaptabilité</li>
+                <li>Créativité</li>
+                <li>Gestion du stress</li>
+            </ul>
+
+            <div class="section-title-sidebar">Langues</div>
+            <ul class="languages">
+                <li><strong>Portugais :</strong> C2 (Bilingue)</li>
+                <li><strong>Espagnol :</strong> B2 (Avancé)</li>
+                <li><strong>Anglais :</strong> B1 (Intermédiaire)</li>
+            </ul>
+
+            <div class="section-title-sidebar">Loisirs</div>
+            <ul class="hobbies">
+                <li>💻 Codage & Veille Tech</li>
+                <li>🎮 Jeux vidéo</li>
+                <li>📚 Manga</li>
+                <li>🏀 Sport</li>
+                <li>🎵 Musique</li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="header-name">
+                <h1>Nelson Gonçalves</h1>
+                <h2>Développeur Web & Mobile</h2>
+            </div>
+
+            <div class="section-title-main">Profil</div>
+            <p class="profile-text">
+                Étudiant en 3ème année de BUT Informatique à l'Université Sorbonne Paris-Nord, je suis passionné par la création d'interfaces intuitives et le développement fonctionnel. Fort d'expériences concrètes en développement Frontend (React Native, Web) et d'une polyvalence acquise dans le service, je recherche un stage pour mettre mes compétences techniques au service de vos projets.
+            </p>
+
+            <div class="section-title-main">Expérience Professionnelle</div>
+            
+            <div class="experience-item">
+                <div class="job-title">Développeur Frontend & Webmaster</div>
+                <div class="company-date">Lacuis'Inn - Mauguio | Juin 2024 – Juillet 2024</div>
+                <ul class="tasks">
+                    <li>Création complète du site web du restaurant (UX/UI, Intégration).</li>
+                    <li>Digitalisation : Mise en place carte numérique (QR Code) et cartes de visite.</li>
+                    <li>Polyvalence : Gestion bar/caisse et support technique.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-title">Développeur Frontend (React Native)</div>
+                <div class="company-date">Socializus App | Janvier 2024 – Mars 2024</div>
+                <ul class="tasks">
+                    <li>Conception et intégration de pages "Récompenses" sur l'application mobile.</li>
+                    <li>Affichage dynamique des points et avantages selon le profil utilisateur.</li>
+                    <li>Optimisation de l'UX mobile.</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-title">Serveur Polyvalent</div>
+                <div class="company-date">Gotham - Paris | Juin 2021 – Février 2023</div>
+                <ul class="tasks">
+                    <li>Coordination salle-cuisine et gestion autonome des tables.</li>
+                    <li>Développement du sens des responsabilités et relation client.</li>
+                </ul>
+            </div>
+
+            <div class="section-title-main">Formation</div>
+            
+            <div class="education-item">
+                <div class="job-title">BUT Informatique</div>
+                <div class="company-date">Univ. Sorbonne Paris-Nord | 2022 – 2025 (En cours)</div>
+                <div class="tasks">Parcours réalisation d'applications : conception, dév, validation.</div>
+            </div>
+
+            <div class="education-item">
+                <div class="job-title">Baccalauréat Technologique STI2D</div>
+                <div class="company-date">Lycée Léonard de Vinci | 2020 – 2022</div>
+                <div class="tasks">Option SIN (Systèmes d'Information et Numérique) - Mention AB.</div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
